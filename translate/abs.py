@@ -8,6 +8,8 @@ def find_abs_pair(eq):
     for i in range(len(eq)):
         if eq[i] == '|':
             stack.append(i)
+    if not stack:
+        return eq
     cnt = 0
     calib = 0
     tocnt = len(stack) // 2
